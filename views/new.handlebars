@@ -1,0 +1,53 @@
+<div class="container my-4">
+  <form ref='uploadForm' id='uploadForm' action='/add' method='POST' encType="multipart/form-data">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="name" class="text-danger">中文名字</label>
+        <input type="text" class="d-none" name="_id" value="{{_id}}">
+        <input type="text" class="form-control" name="name" id="name" placeholder="餐廳名稱(中文)" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="name_en">英文名字</label>
+        <input type="text" class="form-control" name="name_en" id="name_en" placeholder="餐廳名稱(英文)">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="category" class="text-danger">類別</label>
+        <input type="text" class="form-control" name="category" id="category" placeholder="中東料理" required>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="phone">電話</label>
+        <input type="tel" class="form-control" name="phone" id="phone" placeholder="02 1234 5678" pattern="[0-9]{2} [0-9]{4} [0-9]{4}">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="rating" class="text-danger">評分</label>
+        <input type="number" class="form-control" name="rating" id="rating" step="0.1" min="0" max="5" placeholder="4.0"
+          required>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="location" class="text-danger">地址</label>
+      <input type="text" class="form-control" name="location" id="location" placeholder="台北市羅斯福路123巷1樓" required>
+    </div>
+
+
+    <div class="form-group">
+      <label for="description">描述</label>
+      <textarea class="form-control" name="description" id="description" placeholder="Descriptions" rows="4"></textarea>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="uploadFile" class="text-danger">請選擇圖片</label>
+        <input type="file" class="form-control-file" name="uploadFile" id="uploadFile" accept=".jpg" required>
+      </div>
+      <div class="form-group col-md-6 align-self-end">
+        <button class="btn btn-danger w-50 " type="submit">確認</button>
+      </div>
+    </div>
+
+  </form>
+</div>

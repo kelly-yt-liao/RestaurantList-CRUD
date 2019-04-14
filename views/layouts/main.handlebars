@@ -1,0 +1,45 @@
+<!-- ./views/layouts/main.handlebars -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <!-- navigation -->
+  <nav class="navbar navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="https://i.postimg.cc/JG2gFgJg/logo.png" width="30" height="30" class="d-inline-block align-top" alt="我的餐廳清單">
+        我的餐廳清單
+      </a>
+    </div>
+  </nav>
+
+  <div class="banner"></div>
+
+  <!-- link css files and other css frameworks here -->
+  <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+  <link rel="stylesheet" href="/stylesheets/template.css">
+  <link rel="shortcut icon" href="https://i.imgur.com/8QoJfMu.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- partial templates will replace the following part of "body" here -->
+  <!-- 以下 3個括弧 的語法 表示 中間內容 會被解讀為 html語法 ;
+  2個括弧 則表示 中間內容 會直接被解讀為 string. -->
+
+  {{{ body }}}
+
+  <!-- include javascript files here -->
+  <script src="/javascripts/jquery-3.3.1.js"></script>
+  <script src="/javascripts/popper.js"></script>
+  <script src="/javascripts/bootstrap.js"></script>
+</body>
+
+</html>

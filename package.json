@@ -1,0 +1,29 @@
+{
+  "name": "RestaurantList-CRUD",
+  "version": "1.0.0",
+  "description": "A modification with CRUD framework for 'RestaurantListExpress' repository.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kelly-yt-liao/RestaurantList-CRUD.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kelly-yt-liao/RestaurantList-CRUD/issues"
+  },
+  "homepage": "https://github.com/kelly-yt-liao/RestaurantList-CRUD#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-fileupload": "^1.1.4",
+    "express-handlebars": "^3.0.2",
+    "mongoose": "^5.5.1",
+    "pug": "^2.0.3"
+  }
+}
