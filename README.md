@@ -1,2 +1,2 @@
 # RestaurantList-CRUD
-A modification with CRUD framework for RestaurantListExpress
+A modification with CRUD framework for 'RestaurantListExpress' repository.
