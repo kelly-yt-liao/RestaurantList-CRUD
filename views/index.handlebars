@@ -3,22 +3,34 @@
 
 {{!-- <div class="container mt-5"> --}}
 
-  <!-- search bar -->
-  <div class="container search-bar">
-    <div class="search-bar-outer">
-      <div class="search-bar-inner">
-        <form action="/search">
-          <h4 class="mb-2">尋找餐廳：</h4>
-          <div class="input-group">
-            <input type="text" name="keyword" class="form-control" placeholder="輸入餐廳、分類" aria-label="Restaurant Name..."
-              value="{{keyword}}" aria-describedby="search-button">
-            <div class="input-group-append">
-              <button class="btn btn-major" type="submit" id="search-button"><i class="fas fa-search"></i></button>
+  <!-- search bar and drop-down list-->
+  <div class="container sb-dd">
+    <div class="container search-bar">
+      <div class="search-bar-outer">
+        <div class="search-bar-inner">
+          <form action="/search">
+            <h4 class="mb-2">尋找餐廳：</h4>
+            <div class="input-group">
+              <input type="text" name="keyword" class="form-control" placeholder="輸入餐廳、分類" aria-label="Restaurant Name..."
+                value="{{keyword}}" aria-describedby="search-button">
+              <div class="input-group-append">
+                <button class="btn btn-major" type="submit" id="search-button"><i class="fas fa-search"></i></button>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Sort</button>
+      <div class="dropdown-content">
+        <a href="/sort/AtoZ">A -> Z</a>
+        <a href="/sort/category">Category</a>
+        <a href="/sort/area">Area</a>
+      </div>
+    </div>
+
   </div>
 
   <!-- restaurant list -->
@@ -47,7 +59,7 @@
               {{!-- add edit & delete icon --}}
               <div class="media-btn col-1 align-self-center d-flex">
                 <a href="/edit/{{this._id}}" class="p-2"><i class="fas fa-pen-square"></i></a>
-                <form action="/delete/{{this._id}}" method="POST" class="p-2">
+                <form action="/delete/{{this._id}}?_method=DELETE" method="POST" class="p-2">
                   <button type="submit"><i class="fas fa-trash"></i></button>
                 </form>
               </div>

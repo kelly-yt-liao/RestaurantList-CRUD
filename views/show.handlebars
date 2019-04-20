@@ -1,4 +1,5 @@
 <!-- ./views/show.handlebars -->
+{{!-- the show page is mapping to the detail page --}}
 
 <h1 class="mb-1 restaurant-show-title">{{place.name}}</h1>
 <div class="container">
@@ -38,6 +39,11 @@
       </p>
 
       <img class="rounded mx-auto d-block mb-4 w-100" src="{{place.image}}" alt="{{place.name}}" style="max-width: 600px;">
+
+      <form action="/delete/{{this._id}}?_method=DELETE" method="POST" class="p-2">
+        <button type="submit"><i class="fas fa-trash"></i></button>
+      </form>
+
     </div>
   </div>
 </div>

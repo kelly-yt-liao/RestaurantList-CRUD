@@ -7,17 +7,6 @@ mongoose.connect('mongodb://localhost/restaurant', { useNewUrlParser: true })
 
 const db = mongoose.connection
 
-// db.on('error', () => {
-// 	console.log('mongodb connection error!')
-// })
-
-// db.once('open', () => {
-// 	console.log('mongodb connection success~!:)')
-// for (let restaurant of restaurantList.results) {
-// 	Restaurant.create(restaurant)
-// }
-// })
-
 db.on('error', () => {
 	console.log('[for db initialization] mongodb connection error!')
 })
